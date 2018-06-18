@@ -1,0 +1,52 @@
+<!--
+    
+    Slide Down : Funciona para deslizar un elemento html hacia abajo
+      Sintaxis :  $(selector).slideDown(speed, callback)
+
+    SlideUP    :Funciona para deslizar elementos html hacia arriba
+      Sintaxis : $(selector).slideUp(speed, callback);
+    
+    SlideToggle : Alterna los metodos SlideDown y SlideUp
+    Sintaxis    : $(selector).slideToggle(speed, callback)   
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Slide Up</title>
+    <script src="../jquery/dist/jquery.min.js"></script>
+<style>
+    #con1{
+          width: 400px;
+          height: 100px;
+          padding: 50px;
+          /* display: none; */
+          background: #FF0040;
+    }
+</style>
+
+    <script>
+        $(document).ready(function ()
+        {
+         $("#evento").click(function(){
+              $("#con1").slideUp(5000, function(){
+                  alert('Se produjo un evento SlideUp');
+              });
+             
+              });
+        });
+    </script>
+</head>
+<body>
+        <button id="evento"> Pulsa Aquí -> SlideUp</button>
+        <div id="con1">
+            Este es el Método SlideUp()
+        </div>
+
+    </body>
+</html>

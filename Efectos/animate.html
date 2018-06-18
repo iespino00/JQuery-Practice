@@ -1,0 +1,57 @@
+<!--
+
+ANIMATE : se utiliza para animaciones personalizadas
+sintaxis: $(selector).animate({params},speed, callback)
+*params = obligatorios , requiere definir propiedades css
+* speed = opcional
+* callback = opcional
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animate</title>
+    <script src="../jquery/dist/jquery.min.js"></script>
+    <style>
+    #cont1{
+
+        width: 400px;
+        height: 100px;
+        padding: 50px;
+        background: #FF0040;
+        position: absolute;
+    }
+    </style>
+    <script>
+    $(document).ready(function()
+    {
+        $("#evento").click(function()
+        {
+
+            $("#cont1").animate(
+                {
+                left: '250px',
+                opacity: '0.5',
+                height: '150px',
+                width: '150px'
+                });
+
+        });
+
+    });
+    
+    </script>
+</head>
+<body>  
+        <button id="evento">Pulsa aqui</button>
+        <div id="cont1">
+            Este es el metodo Animate()
+        </div>
+    
+</body>
+</html>
