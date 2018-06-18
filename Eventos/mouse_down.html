@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../jquery/dist/jquery.min.js"></script>
+
+    <script>
+    $(document).ready(function(){
+
+        $("#h1").mousedown(function(){
+        $(this).hide();
+        alert('Se ocultaran esta etiqueta porque has pulsado hacia abajo en el boton del mouse');
+        });
+    });
+    </script>
+</head>
+<body>
+    
+    <h1 id="h1">El pulsar el boton del mouse hacia abajo en el texto, saldrá el alert </h1>
+</body>
+</html>

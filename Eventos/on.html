@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>On</title>
+    <script src="../jquery/dist/jquery.min.js"></script>
+
+<script>
+
+    $(document).ready(function()
+    {
+             $("p").on({
+                 
+                mouseenter: function()
+                {
+                 $(this).css("background-color", "#FF00BF"); //Rosa al pasar el mouse por p
+                },
+
+                mouseleave: function()
+                {
+                    $(this).css("background-color","#AEB404");  //verdeal salir el mouse del p
+                },
+                click : function()
+                {
+                    $(this).css("background-color","#08088A");  // azul al dar clic en p
+                }
+
+              });
+    });
+</script>
+</head>
+<body>
+    <p >Dependiendo del movimiento del mouse se producirá un color</p>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hover</title>
+    <script src="../jquery/dist/jquery.min.js"></script>
+
+<script>
+
+    $(document).ready(function(){
+
+                $("#h1").hover(function(){
+                    $(this).hide();
+                    alert('se ocultaran esta etiqueta porque has posicionado sobre la misma');
+
+                });
+    });
+</script>
+</head>
+<body>
+    <h1 id="h1">Cuando te posiciones sobre la etiqueta saldra el alert y despues desaparecera esa etiqueta</h1>
+</body>
+</html>

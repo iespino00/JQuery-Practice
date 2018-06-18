@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Focus y blur</title>
+    <script src="../jquery/dist/jquery.min.js"></script>
+
+<script>
+
+    $(document).ready(function()
+    {
+
+                $("input").focus(function()  //se ejecuta cuando pulsamos en la caja del formulario
+                {
+                    $(this).css("background-color","#E3CEF6"); //AZUL
+                });
+
+                $("input").blur(function(){
+                    $(this).css("background-color", "#FFFFFF") //BLANCO
+                });
+    });
+</script>
+</head>
+<body>
+    <h1>Usuario: <input type="text" name="usuario"  placeholder="usuario"></h1>
+    <h1>Password: <input type="text" name="password" placeholder="password"></h1>
+</body>
+</html>
