@@ -1,0 +1,60 @@
+
+<!-- stop
+    se utiliza para detener una animacion o efecto antes de que termine , 
+    
+    Funciona para todas las funciones o efectos jquery, incluyendo deslizamientos, decoloracion y animaciones personalizadas.
+
+    Sintaxis:
+    $(selector).stop(stopALL, goToEnd);
+    *  Selector, es opcinal, por defecto detiene el efecto o funcion que se esta ejecutando, si se pasa selector se paraliza la fncion o cola seleccionada.
+
+    * StopALL : es opcional, especifica si la cola de funciones del selector debe tener por completo , por defecto asume false solo se detiene la ejecucion de la funcion actual.
+
+    * GoToEnd: es opcional, por defecto su valor es false, especifica si la ejecucion de la funcion actual debe completarse.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Stop</title>
+    <script src="../jquery/dist/jquery.min.js"></script>
+<style>
+    .con1{
+        position: absolute;
+        background: #abc;
+        left: 0px;
+        top: 30px;
+        width: 60px;
+        height: 60px;
+        margin: 5px;
+    }
+</style>
+    
+<script>
+    $(document).ready(function()
+    {
+        $("#go").click(function(){
+
+            $(".con1").animate({left:"+=500px"},2000);
+        });
+
+        $("#stop").click(function(){
+            $(".con1").stop();
+        });
+
+        $("#back").click(function(){
+            $(".con1").animate({left:"-=300px"},2000);
+        });
+    });
+</script>
+</head>
+<body>
+    <button id="go">Empezar</button>
+    <button id="stop">Stop</button>
+    <button id="back">back</button>
+    <div class="con1"></div>
+</body>
+</html>
