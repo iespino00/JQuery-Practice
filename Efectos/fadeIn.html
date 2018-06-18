@@ -1,0 +1,79 @@
+<!-- FADE
+1.-  FideIn():
+     Muestra un elemento (Anteriormente Oculto) cambiando su opacidad
+     
+     Sintaxis:
+       $(selector).fadeIn(speed,callback)
+
+2.-  FideOut():
+     Oculta un elemento (Anteriormente Visible) cambiando su opacidad
+
+     Sintaxis:
+       $(selector).fadeOut(speed,callback)
+
+3.-  Fade Toggle()
+       Alterna los efecto fadeIn y FadeOut
+       Sintaxis
+       $(selector).fadeToggle(speed,callback)
+
+4.-  FadeTo():
+     Asiga un nivel de opacidad a un elemento html
+     Sintaxis:
+       $(selector).fadeTo(speed, opacity, callback)
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fade</title>
+    <style>
+    #contenedor1{
+        width: 100px;
+        height: 100px;
+        display: none;
+        background: #ff0040;
+    }
+    #contenedor2{
+        width: 100px;
+        height: 100px;
+        display: none;
+        background: #0040ff;
+    }
+    #contenedor3{
+        width: 100px;
+        height: 100px;
+        display: none;
+        background: #01DF01;
+    }
+    </style>
+
+
+
+    <script src="../jquery/dist/jquery.min.js"></script>
+
+    <script>
+    $(document).ready(function(){
+
+        $("#FadeIn").click(function()
+        { 
+         $("#contenedor1").fadeIn();
+         $("#contenedor2").fadeIn("slow");
+         $("#contenedor3").fadeIn(5000);
+        });
+
+    });
+    </script>
+</head>
+<body>
+   <h1>Se visualizarán los contenedores prueba..!!</h1>
+    <button id="FadeIn">FindeIn</button>
+    <div id="contenedor1"></div>
+    <div id="contenedor2"></div>
+    <div id="contenedor3"></div>
+
+
+</body>
+</html>

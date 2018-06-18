@@ -1,0 +1,30 @@
+<!-- Toggle: Hace lo mismo que show y hide pero con un solo botón
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Toggle</title>
+    <script src="../jquery/dist/jquery.min.js"></script>
+
+    <script>
+    $(document).ready(function()
+    {
+
+        $("#btnAction").click(function()
+        { 
+            $("h1").toggle("slow");
+        });
+
+    });
+    </script>
+</head>
+<body>
+    <h1>Dependiendo del boton que pulses, se ocultara o visualizara el texto de prueba</h1>
+    <button id="btnAction">Toggle (hide and show)</button>
+
+</body>
+</html>

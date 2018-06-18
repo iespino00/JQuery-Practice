@@ -1,0 +1,91 @@
+<!-- FADE
+1.-  FideIn():
+     Muestra un elemento (Anteriormente Oculto) cambiando su opacidad
+     
+     Sintaxis:
+       $(selector).fadeIn(speed,callback)
+
+2.-  FideOut():
+     Oculta un elemento (Anteriormente Visible) cambiando su opacidad
+
+     Sintaxis:
+       $(selector).fadeOut(speed,callback)
+
+3.-  Fade Toggle()
+       Alterna los efecto fadeIn y FadeOut
+       Sintaxis
+       $(selector).fadeToggle(speed,callback)
+
+4.-  FadeTo():
+     Asiga un nivel de opacidad a un elemento html
+     Sintaxis:
+       $(selector).fadeTo(speed, opacity, callback)
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FadeTO</title>
+    <style>
+    #contenedor1{
+        width: 100px;
+        height: 100px;
+       /* display: none */
+        background: #ff0040;
+    }
+    #contenedor2{
+        width: 100px;
+        height: 100px;
+        background: #0040ff;
+    }
+    #contenedor3{
+        width: 100px;
+        height: 100px;
+        background: #01DF01;
+    }
+    </style>
+
+
+
+    <script src="../jquery/dist/jquery.min.js"></script>
+
+    <script>
+    $(document).ready(function(){
+
+        $("#fadeTo").click(function()
+        { 
+         $("#contenedor1").fadeTo("slow", 0.7);
+         $("#contenedor2").fadeTo("fast", 0.5);
+         $("#contenedor3").fadeTo(5000, 0.3);
+        });
+
+      //cuando paso el clic por el contenedor 3, opaco el color, cuando sale del contenedor vuelve como estaba
+          $("#contenedor3").on({
+            mouseenter: function()
+                {
+                    $("#contenedor3").fadeTo("slow", 0.2);
+                },
+
+                mouseleave: function()
+                {
+                    $("#contenedor3").fadeTo("slow", 1.7);
+                }
+          });
+       
+
+    });
+    </script>
+</head>
+<body>
+   <h1>Se visualizarán los contenedores prueba..!!</h1>
+    <button id="fadeTo">fadeTo</button>
+    <div id="contenedor1"></div>
+    <div id="contenedor2"></div>
+    <div id="contenedor3"></div>
+
+
+</body>
+</html>
