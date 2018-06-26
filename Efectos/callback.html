@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Callback</title>
+    <script src="../jquery/dist/jquery.min.js"></script>
+
+    <style>
+        .con1{
+            position: absolute;
+            background: #abc;
+            left: 0px;
+            top: 30px;
+            width: 60px;
+            height: 60px;
+            margin: 5px;
+        }
+    </style>
+
+
+<script>
+    $(document).ready(function(){
+    
+    
+        $("#go").click(function()
+        {
+            for(z=1;z<10;z++)
+            {
+                    $(".con1").animate({left:"+=50px"},2000, function()
+                    {
+                        $(".con1").animate({left:"-=50px"},2000);
+                    });
+            }
+        });
+    
+    });
+</script>
+</head>
+<body>
+    <button id="go">Empezar</button>
+
+    <div class="con1">
+        
+    </div>
+</body>
+</html>

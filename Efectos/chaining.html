@@ -1,0 +1,39 @@
+<!-- Nos permite ejecutar multiples metodos de jquery en el mismo elemento dentro
+de un solo estado-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chaining</title>
+    <script src="../jquery/dist/jquery.min.js"></script>
+    <style>
+        .con1{
+            position: absolute;
+            background: rgb(126, 27, 122);
+            left: 200px;
+            top: 30px;
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("#go").click(function(){
+              $(".con1").slideUp(5000)
+                        .slideDown(5000)
+                        .animate({left:"+=50px"}, 2000, function(){
+                          $(".con1").animate({left:"-=50px"}, 2000);
+                          alert('Ha finalizado la animacion multiple');
+                        });
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="go">Empezar</button>
+    <div class= "con1"></div>
+</body>
+</html>
