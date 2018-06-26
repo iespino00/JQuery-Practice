@@ -1,0 +1,74 @@
+<!--JQuery Get -> devuelve contenido y atributos
+
+    La manipulacion del DOM:
+Una parte muy importante de jquery es la posibilidad de manipular el DOM.
+
+Jquery viene con un monton de metodos relacionados DOM quqe hace que sea más facil de acceder y manipular los elementos y atributos html.
+
+
+DOM = Documento Modelo Objeto
+
+El DOM define un estandar para acceder a documentos html y xml.
+Es una interfáz de plataforma y lenguaje neutro que permite a los programas y scripts acceder y actualizar el contenido, estructura dinámica y estilo de un documento.
+
+
+
+OBTENER CONTENIDO - TEXT() HTML() VAL()
+
+Son métodos sencillos para manipular el DOM.
+1.- TEXT()- Devuelve el contenido de texto de los elementos seleccionados
+Sintaxis: $(selector).text();
+
+2.- HTML()- Devuelve el contenido de elementos seleccionandos, incluye el formato html.
+SIntaxis: $(selector).html();
+
+3.- VAL() -Devuelve el valor de los campos de formulario.
+Sintaxis: $(selector).val();
+
+4.-ATTR() - Se utiliza para obtener valores de atributo
+Sintaxis: $(selector).attr(atributo)
+
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Get</title>
+    <script src="../jquery/dist/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#go_text").click(function(){
+              alert('Texto: ' + $("#text").text());
+            });
+
+            $("#gohtml").click(function(){
+            alert('html: '+ $("#html").html());
+            });
+
+            $("#go_val").click(function(){
+            alert('valor : '+ $("#nombre").val());
+            });
+
+            $("#go_attr").click(function(){
+            alert('valor : '+ $("#attrID").attr('id')); //Obtenemos el ID del atributo
+            });
+        });
+    </script>
+</head>
+<body>
+    <p id="text">Este es el texto que se obtendra con el metodo text()</p>
+    <button id="go_text">Metodo Text()</button>
+
+    <p id="html">Este es el texto que se obtendra con el metodo HTML()</p>
+    <button id="gohtml">Metodo Text()</button>
+
+    <p>Introduce el Nombre <input type="text" name="nombre" id="nombre">
+        <button id="go_val">Metodo val()</button> </p>
+
+        <p id="attrID">Obteniendo atributo</p>
+        <button id="go_attr">Metodo attr()</button>
+</body>
+</html>
