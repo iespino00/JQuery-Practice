@@ -1,0 +1,66 @@
+<!--JQuery Set -> Establece contenido y atributos
+
+
+ASIGNA CONTENIDO - TEXT() HTML() VAL() - Métodos sencillos para manipular el DOM
+
+
+Son métodos sencillos para manipular el DOM.
+1.- TEXT()- Establece contenido de texto de los elementos seleccionados
+Sintaxis: $(selector).text(contenido);
+
+2.- HTML()- Establece contenido de elementos seleccionandos, incluye el formato html.
+SIntaxis: $(selector).html(contenido);
+
+3.- VAL() -Establece valor a los campos de formulario.
+Sintaxis: $(selector).val(contenido);
+
+4.-ATTR() - Se utiliza para establecer valores de atributo
+Sintaxis: $(selector).attr(atributo, contenido)
+
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Get</title>
+    <script src="../jquery/dist/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#go_set_text").click(function(){
+             $("#text").text("Cambiando el contenido de la etiqueta");
+            });
+
+             $("#go_set_html").click(function(){
+             $("#html").html("<b><h1>Cambiando el contenido de la etiqueta</h1></b>");
+            });
+
+             $("#go_set_val").click(function(){
+             $("#nombre").val("Ignacio Espino Rivera");
+            });
+
+
+            $("#go_set_attr").click(function(){
+             $("#texto").attr("id", "nuevoID");
+             alert("atributo ID cambiado a:  " + $("#nuevoID").attr("id"));
+            });
+            
+        });
+    </script>
+</head>
+<body>
+    <p id="text">Este es el texto que se obtendra con el metodo text()</p>
+    <button id="go_set_text">Cambiar contenido del texto</button>
+
+    <p id="html">texto alterado con set HTML(atributo)</p>
+    <button id="go_set_html">HTML</button>
+
+    <p> Introduce tu nombre: <input type="text" id="nombre"></p>
+    <button id="go_set_val">Asignar valor</button>
+ 
+    <p id="texto">texto Con un ID</p>
+    <button id="go_set_attr">Cambiar ID al texto</button>
+</body>
+</html>
