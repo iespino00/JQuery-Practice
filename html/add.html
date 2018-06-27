@@ -1,0 +1,48 @@
+<!-- Jquery Add Elementos -->
+<!--
+
+Append() -> Inserta contenido en el final del elemento html seleccionado
+Sintaxis: $(selector).append(cont);
+
+prepend() -> Inserta contenido al inicio de los elementos html seleccionados
+Sintaxis: $(selector).prepend(cont);
+
+after() -> Inserta contenido despues de los elementos html seleccionados
+Sintaxis: $(selector).after(cont);
+
+before()-> Inserta contenido antes de los elementos html seleccionados
+Sintaxis: $(selector).before(cont);
+
+Selector : Etiqueta html seleccionado para insertar
+Cont : Contenido a insertar
+
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jquery Add Elementos</title>
+    <script src="../jquery/dist/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                dato1 = $("input").val();
+                $("ul").before("<li>" + dato1 + "</li>");
+            });
+        });
+    </script>
+</head>
+<body>
+    <ul>
+        <li>Insertar al final de este elemento abajo</li>
+    </ul>
+    <p>
+        Introduce el dato: <input type="text" id="dato" name="dato" value="dato"></p>
+     <button id="btn">Agregar Dato</button>
+    
+</body>
+</html>

@@ -26,6 +26,7 @@ Sintaxis: $(selector).attr(atributo, contenido)
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Get</title>
     <script src="../jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
     <script>
         $(document).ready(function(){
@@ -39,6 +40,7 @@ Sintaxis: $(selector).attr(atributo, contenido)
 
              $("#go_set_val").click(function(){
              $("#nombre").val("Ignacio Espino Rivera");
+             $("#txtnombre").attr("class","w3-text-blue");
             });
 
 
@@ -57,7 +59,7 @@ Sintaxis: $(selector).attr(atributo, contenido)
     <p id="html">texto alterado con set HTML(atributo)</p>
     <button id="go_set_html">HTML</button>
 
-    <p> Introduce tu nombre: <input type="text" id="nombre"></p>
+    <p > <label id="txtNombre">Introduce tu nombre: </label><input type="text" id="nombre"></p>
     <button id="go_set_val">Asignar valor</button>
  
     <p id="texto">texto Con un ID</p>
