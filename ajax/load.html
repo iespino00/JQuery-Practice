@@ -1,0 +1,39 @@
+<!--
+Podemos cargar en un elemento html <div> un archivo externo (php, html..) en el momento que lo necesitemos o bajo peticion del usuario mediante formulario, botones, enlaces...etc
+
+    Sintaxis:
+
+    Load(url[,data][,callback(responseTxt, statusTxt, xhr)])
+
+    * url         = Cadena que contiene la url a cargar (obligatoria)
+    * Data        = Parámetros que podemos pasar para ser tratados por el destino de la url (Opcional)
+    * Callback    = Funcion invocada despues de procesar la url (opcional)
+    * ResponseTxt = Contiene el contenido resultante si la llamada se realiza correctamente
+    * StatusTxt   = Contiene el estado de la llamada.
+    * Xhr         = Contiene el objeto XMLHttpRequest.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ajax load</title>
+    <script src="../jquery/dist/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#button").click(function(event){
+                $("#capa").load("archivo.php #contenido"); //cargara en capa el div contenido del archivo.php
+            });
+        });
+    </script>
+</head>
+<body>
+    
+    <div id="capa"> Pulsa el boton y se actualizará este texto</div>
+    <button id="button">Actualizar</button>
+</body>
+</html>
